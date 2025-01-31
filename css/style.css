@@ -168,6 +168,14 @@ h6,
     background-color: #2a2a2a;
   }
 
+  #logo{
+    width: 80px !important;
+  }
+
+  .services-section{
+    font-size: 10px;
+  }
+
   .navbar-dark .navbar-brand h1 {
     color: var(--primary);
   }
@@ -227,12 +235,17 @@ h6,
 @media (max-width: 576px) {
   .carousel-caption h5 {
     font-size: 14px;
+    padding-top: 95px;
     font-weight: 500 !important;
   }
 
   .carousel-caption h1 {
-    font-size: 30px;
+    font-size: 15px;
     font-weight: 600 !important;
+  }
+
+  .carousel-caption p{
+    font-size: 10px;
   }
 }
 
@@ -495,13 +508,19 @@ h6,
 
 .bg-header {
   background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
-    url(../img/creative-people-working-office.jpg) center center no-repeat;
+    url(../img/about-as-service-contact-information-concept.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .bg-terms {
   background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
     url(../img/tc.jpg) center center no-repeat !important;
+  background-size: cover !important;
+}
+
+.bg-privacy {
+  background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
+    url(../img/privacy.jpg) center center no-repeat !important;
   background-size: cover !important;
 }
 
@@ -513,7 +532,7 @@ h6,
 
 .bg-service {
   background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
-    url(../img/service.png) center center no-repeat !important;
+    url(../img/standard-quality-control-concept-m.jpg) center center no-repeat !important;
   background-size: cover !important;
 }
 
@@ -700,4 +719,87 @@ h6,
 
 .contact-box:hover .ps-4 h5 {
   color: #0056b3; /* Change header color on hover */
+}
+
+
+/* Whatsapp Section */
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: calc(45% - 100px);
+  right: 0;
+  background-color: #34ad54;
+  color: #fff;
+  border-radius: 50% 0 0 50%;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.float .my-float {
+  font-size: 25px !important;
+  margin-top: 16px;
+}
+.float:hover{
+  color: #fff !important;
+}
+.my-float .arrow {
+  display: none;
+  width: 12px;
+  height: 20px;
+  overflow: hidden;
+  /* position: fixed; */
+  margin-left: 20px;
+  margin-top: -30px;
+  float: left;
+  transform: rotate(270deg);
+  top: 194px;
+  right: 12px;
+  transition: 0.2s ease-in-out;
+}
+
+.my-float:hover .arrow {
+  display: block;
+}
+
+
+.my-float .arrow .outer, .my-float .arrow .inner {
+  width: 0;
+  height: 0;
+  border-right: 20px solid rgba(0, 0, 0, 0.8);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+}
+
+.my-float .arrow .inner {
+  left: 2px;
+}
+
+
+.float i[data-tooltip]::after {
+  content: attr(data-tooltip);
+  width: max-content;
+  font-family: "Source Sans Pro";
+  position: absolute;
+  right: 0px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 70px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  color: white;
+  transform: scale(0);
+  transition: 0.2s ease-in-out;
+}
+
+.float i[data-tooltip]:hover::after {
+  transform: scale(1);
 }

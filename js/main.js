@@ -139,3 +139,35 @@ window.addEventListener('scroll', function() {
 });
 
 
+// Add Customer
+
+function updateCounter() {
+    let currentValue = parseInt($("#counter").text().replace(/,/g, ''));
+    let randomIncrement = Math.floor(Math.random() * 10); // Random number between 0-9
+    let newValue = currentValue + randomIncrement;
+    
+    $("#counter").text(newValue.toLocaleString()); // Update counter with formatted number
+}
+
+// Run every hour (3600000 ms)
+setInterval(updateCounter, 3600000);
+
+
+
+// Payment Increasing
+
+function updatePaymentsCounter() {
+    let currentValue = parseInt($("#paymentsCounter").text().replace(/,/g, ''));
+    let randomIncrement = Math.floor(Math.random() * 10); // Random number between 0-9
+    let newValue = currentValue + randomIncrement;
+    
+    $("#paymentsCounter").text(newValue.toLocaleString()); // Update counter with formatted number
+}
+
+// Run every minute (60000 ms)
+setInterval(updatePaymentsCounter, 60000);
+
+
+
+// year increase based on year logic
+document.getElementById("year").textContent = new Date().getFullYear();
