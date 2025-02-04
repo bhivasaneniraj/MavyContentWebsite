@@ -426,6 +426,7 @@ h6,
 /*** Team ***/
 .team-item {
   transition: 0.5s;
+  border-radius: 20px !important;
 }
 
 .team-social {
@@ -517,6 +518,14 @@ h6,
     url(../img/tc.jpg) center center no-repeat !important;
   background-size: cover !important;
 }
+
+.bg-team-mavy {
+  background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
+    url(../img/group-people-working-out-business-plan-office.jpg) no-repeat !important;
+  background-size: cover !important;
+  background-position: center 30% !important; /* Move the image slightly down */
+}
+
 
 .bg-privacy {
   background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
@@ -802,4 +811,26 @@ h6,
 
 .float i[data-tooltip]:hover::after {
   transform: scale(1);
+}
+
+.designation-name{
+  font-size: 15px;
+}
+
+
+.team-founder {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Adjust the height as needed */
+}
+
+.team-founder img {
+  width: 100%; /* Make the image fill the container width */
+  height: 100%; /* Make the image fill the container height */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+  object-position: top; /* Focus on the top part of the image (where faces are) */
+}
+
+.team-founder{
+  height: 500px;
 }
