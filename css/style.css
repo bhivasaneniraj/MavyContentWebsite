@@ -164,15 +164,15 @@ h6,
     color: var(--light);
   }
 
-  .navbar{
+  .navbar {
     background-color: #2a2a2a;
   }
 
-  #logo{
+  #logo {
     width: 80px !important;
   }
 
-  .services-section{
+  .services-section {
     font-size: 10px;
   }
 
@@ -244,7 +244,7 @@ h6,
     font-weight: 600 !important;
   }
 
-  .carousel-caption p{
+  .carousel-caption p {
     font-size: 10px;
   }
 }
@@ -362,7 +362,7 @@ h6,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--primary);
+  /* background: var(--primary); */
   border-radius: 2px;
   transform: rotate(0deg);
 }
@@ -509,7 +509,8 @@ h6,
 
 .bg-header {
   background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
-    url(../img/about-as-service-contact-information-concept.jpg) center center no-repeat;
+    url(../img/about-as-service-contact-information-concept.jpg) center center
+      no-repeat;
   background-size: cover;
 }
 
@@ -525,7 +526,6 @@ h6,
   background-size: cover !important;
   background-position: center 30% !important; /* Move the image slightly down */
 }
-
 
 .bg-privacy {
   background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
@@ -587,6 +587,27 @@ h6,
   .service-item * {
     position: relative; /* Ensure content stays above the pseudo-element */
     z-index: 1;
+  }
+
+  .service-item img {
+    position: relative;
+    transition: opacity 0.5s ease;
+  }
+
+  .service-item img.default {
+    display: block;
+  }
+
+  .service-item img.hover {
+    display: none;
+  }
+
+  .service-item:hover img.default {
+    display: none;
+  }
+
+  .service-item:hover img.hover {
+    display: block;
   }
 
   .service-icon img {
@@ -697,7 +718,6 @@ h6,
   }
 }
 
-
 /* contact section */
 
 .contact-box {
@@ -730,7 +750,6 @@ h6,
   color: #0056b3; /* Change header color on hover */
 }
 
-
 /* Whatsapp Section */
 
 .float {
@@ -751,7 +770,7 @@ h6,
   font-size: 25px !important;
   margin-top: 16px;
 }
-.float:hover{
+.float:hover {
   color: #fff !important;
 }
 .my-float .arrow {
@@ -773,8 +792,8 @@ h6,
   display: block;
 }
 
-
-.my-float .arrow .outer, .my-float .arrow .inner {
+.my-float .arrow .outer,
+.my-float .arrow .inner {
   width: 0;
   height: 0;
   border-right: 20px solid rgba(0, 0, 0, 0.8);
@@ -788,7 +807,6 @@ h6,
 .my-float .arrow .inner {
   left: 2px;
 }
-
 
 .float i[data-tooltip]::after {
   content: attr(data-tooltip);
@@ -813,10 +831,9 @@ h6,
   transform: scale(1);
 }
 
-.designation-name{
+.designation-name {
   font-size: 15px;
 }
-
 
 .team-founder {
   position: relative;
@@ -831,6 +848,6 @@ h6,
   object-position: top; /* Focus on the top part of the image (where faces are) */
 }
 
-.team-founder{
+.team-founder {
   height: 500px;
 }
